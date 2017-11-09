@@ -1,0 +1,10 @@
+Package: bayestools
+Title: Tools for Pre- and Post-processing in Phylogenetic Bayesian Inference.
+Version: 0.0.0.9000
+Authors@R: person("Gustavo A.", "Ballen", email = "gaballench@gmail.com", role = c("aut", "cre"))
+Description: Package for bayesian inference in phylogenetics and evolution
+Depends: R (>= 3.4.2)
+License: GNU General Public License v3.0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
