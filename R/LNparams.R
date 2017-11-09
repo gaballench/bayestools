@@ -4,7 +4,7 @@
 #'
 #' @param q1,q2,q3 Observed quantiles, might come from a HPD from a previous study (along with a median), or from biostratigraphic constrains.
 #'
-#' @param params Internal params to be optimized by the optim funciton on the internal .quadraticFun function
+#' @param params Internal params to be optimized by the optim funciton on the internal .quadraticFun function. THIS ARGUMENT DOES NOT SHOW ANYWHERE IN THE FUNCTION BODY!
 #'
 #' @param output One of two possible values (unconstrained internally): "complete" and "parameters". For the latter the complete output of the optim function is returned with information on convergence and squared errors (that might be useless for simple cases) or just the parameters
 #'
