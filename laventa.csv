@@ -1,0 +1,88 @@
+age	one_sigma	sample	unit	elevation	mineral	comments
+8.969	0.162	LGM-LV9	Gigante Fm.	1200	Hornblende	
+8.282	0.167	LGM-LV9	Gigante Fm.	1200	Hornblende	
+8.364	0.171	LGM-LV9	Gigante Fm.	1200	Hornblende	
+8.289	0.147	LGM-LV9	Gigante Fm.	1200	Hornblende	
+8.422	0.334	LGM-LV9	Gigante Fm.	1200	Hornblende	
+9.527	0.198	LGM-LV9	Gigante Fm.	1200	Hornblende	
+8.677	0.279	LGM-LV9	Gigante Fm.	1200	Hornblende	
+7.145	0.175	LGM-LV9	Gigante Fm.	1200	Hornblende	
+6.306	0.373	JG-R 88-4	Neiva Fm.	1040	Plagioclase	
+10.443	0.496	JG-R 88-4	Neiva Fm.	1040	Plagioclase	
+10.13	0.362	JG-R 88-4	Neiva Fm.	1040	Plagioclase	
+10.012	0.285	JG-R 88-4	Neiva Fm.	1040	Plagioclase	
+10.203	0.464	JG-R 88-4	Neiva Fm.	1040	Plagioclase	
+10.031	1.159	JG-R 88-4	Neiva Fm.	1040	Plagioclase	
+12.486	0.407	JG-R 88-2	Villavieja Fm.	675	Hornblende	
+12.174	0.527	JG-R 88-2	Villavieja Fm.	675	Hornblende	
+10.27	0.28	JG-R 88-2	Villavieja Fm.	675	Hornblende	
+12.022	0.219	JG-R 88-2	Villavieja Fm.	675	Hornblende	
+12.319	0.493	JG-R 88-2	Villavieja Fm.	675	Hornblende	
+12.316	0.2	JG-R 88-2	Villavieja Fm.	675	Hornblende	
+12.028	0.588	JG-R 88-2	Villavieja Fm.	675	Plagioclase	
+12.079	0.81	JG-R 88-2	Villavieja Fm.	675	Plagioclase	
+12.247	1.039	JG-R 88-2	Villavieja Fm.	675	Plagioclase	
+12.177	0.452	JG-R 88-2	Villavieja Fm.	675	Plagioclase	
+12.116	0.506	JG-R 88-2	Villavieja Fm.	675	Plagioclase	
+11.899	1.099	JG-R 88-2	Villavieja Fm.	675	Plagioclase	
+12.687	0.411	JG-R 89-2	La Victoria Fm.	450	Hornblende	
+12.387	0.169	JG-R 89-2	La Victoria Fm.	450	Hornblende	
+12.537	0.192	JG-R 89-2	La Victoria Fm.	450	Hornblende	
+12.304	0.584	JG-R 89-2	La Victoria Fm.	450	Hornblende	
+12.515	0.386	JG-R 89-2	La Victoria Fm.	450	Hornblende	
+12.819	0.514	JG-R 89-2	La Victoria Fm.	450	Hornblende	
+12.751	0.519	JG-R 89-2	La Victoria Fm.	450	Plagioclase	
+12.432	0.809	JG-R 89-2	La Victoria Fm.	450	Plagioclase	
+12.748	6.681	JG-R 89-2	La Victoria Fm.	450	Plagioclase	
+12.746	0.461	JG-R 89-2	La Victoria Fm.	450	Plagioclase	
+12.52	2.022	JG-R 89-2	La Victoria Fm.	450	Plagioclase	
+12.549	0.459	JG-R 89-2	La Victoria Fm.	450	Plagioclase	
+13.66	0.759	JR-R 90-1 and 1B	La Victoria Fm.	255	Hornblende	
+13.455	1.198	JR-R 90-1 and 1B	La Victoria Fm.	255	Hornblende	
+13.248	2.669	JR-R 90-1 and 1B	La Victoria Fm.	255	Hornblende	
+11.412	0.527	JR-R 90-1 and 1B	La Victoria Fm.	255	Hornblende	
+13.162	0.54	JR-R 90-1 and 1B	La Victoria Fm.	255	Hornblende	
+11.302	0.524	JR-R 90-1 and 1B	La Victoria Fm.	255	Hornblende	
+13.765	0.197	JG-R 90-3	La Victoria Fm.	120	Biotite	
+15.353	0.357	JG-R 90-3	La Victoria Fm.	120	Biotite	
+13.813	0.095	JG-R 90-3	La Victoria Fm.	120	Biotite	
+15.3	0.655	JG-R 90-3	La Victoria Fm.	120	Hornblende	
+13.591	0.478	JG-R 90-3	La Victoria Fm.	120	Hornblende	
+13.502	0.317	JG-R 90-3	La Victoria Fm.	120	Hornblende	
+13.718	0.564	JG-R 89-3	La Victoria Fm.	133	Hornblende	
+13.693	0.333	JG-R 89-3	La Victoria Fm.	133	Hornblende	
+12.724	0.291	JG-R 89-3	La Victoria Fm.	133	Hornblende	
+13.486	0.484	JG-R 89-3	La Victoria Fm.	133	Hornblende	
+13.496	0.48	JG-R 89-3	La Victoria Fm.	133	Hornblende	
+13.547	0.738	JG-R 89-3	La Victoria Fm.	133	Hornblende	
+13.843	0.096	JG-R 89-3	La Victoria Fm.	133	Biotite	
+13.757	0.304	JG-R 89-3	La Victoria Fm.	133	Biotite	
+13.46	0.25	JG-R 89-3	La Victoria Fm.	133	Biotite	
+13.794	0.087	JG-R 89-3	La Victoria Fm.	133	Biotite	
+13.853	0.148	JG-R 89-3	La Victoria Fm.	133	Biotite	
+13.521	0.281	JG-R 89-3	La Victoria Fm.	133	Plagioclase	
+13.28	0.425	JG-R 89-3	La Victoria Fm.	133	Plagioclase	
+13.214	0.869	JG-R 89-3	La Victoria Fm.	133	Plagioclase	
+13.7	0.325	JG-R 89-3	La Victoria Fm.	133	Plagioclase	
+14.012	0.455	JG-R 89-3	La Victoria Fm.	133	Plagioclase	
+12.699	1.009	JG-R 89-3	La Victoria Fm.	133	Plagioclase	
+13.339	0.452	JG-R 89-1	La Victoria Fm.	56.4	Hornblende	
+13.597	0.265	JG-R 89-1	La Victoria Fm.	56.4	Hornblende	
+13.594	0.876	JG-R 89-1	La Victoria Fm.	56.4	Hornblende	
+13.857	0.488	JG-R 89-1	La Victoria Fm.	56.4	Hornblende	
+13.59	0.325	JG-R 89-1	La Victoria Fm.	56.4	Hornblende	
+13.505	0.693	JG-R 89-1	La Victoria Fm.	56.4	Plagioclase	
+13.62	0.303	JG-R 89-1	La Victoria Fm.	56.4	Plagioclase	
+13.687	0.301	JG-R 89-1	La Victoria Fm.	56.4	Plagioclase	
+13.697	0.282	JG-R 89-1	La Victoria Fm.	56.4	Plagioclase	
+13.722	0.277	JG-R 89-1	La Victoria Fm.	56.4	Plagioclase	
+13.87	0.512	JG-R 89-1	La Victoria Fm.	56.4	Plagioclase	
+0.42	0.097	JG-R 88-3	Honda Gr.	NA	Plagioclase	Location uncertain
+0.787	0.095	JG-R 88-3	Honda Gr.	NA	Plagioclase	Location uncertain
+0.519	0.101	JG-R 88-3	Honda Gr.	NA	Plagioclase	Location uncertain
+0.694	0.093	JG-R 88-3	Honda Gr.	NA	Plagioclase	Location uncertain
+0.531	0.089	JG-R 88-3	Honda Gr.	NA	Plagioclase	Location uncertain
+0.358	0.114	JG-R 88-3	Honda Gr.	NA	Plagioclase	Location uncertain
+7.5	1.572	JG-R 90-2	Honda Gr.	NA	Hornblende	Location uncertain
+7.419	0.271	JG-R 90-2	Honda Gr.	NA	Hornblende	Location uncertain
+-45.433	20.097	JG-R 90-2	Honda Gr.	NA	Hornblende	Location uncertain
