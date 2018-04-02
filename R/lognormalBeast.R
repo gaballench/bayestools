@@ -8,19 +8,22 @@
 #' 
 #' @param offset Hard lower bound.
 #' 
-#' @param from,to Starting and ending point to calculate considering the offset as zero. That is, from will affect produce a starting point of (offset + from) and an ending point of (offset + to) 
+#' @param from,to Starting and ending point to calculate considering the offset as zero. That is, from will affect produce a starting point of (offset + from) and an ending point of (offset + to).
 #'
 #' @return A matrix of two columns consisting of the x and y values of the lognormal density.
 #'
-#' @details This function creates a matrix of x-y values given parameters of a lognormal density as specified in the program Beast2. It's main purpose is for plotting but other uses such as sensitivity quantification are available. Please note that the value of mean depends on whether we expect it to be in real or log space. Please refer to Heath (2015) for more info: \href{http://phyloworks.org/workshops/DivTime_BEAST2_tutorial_FBD.pdf}{Heath, T. A. (2015). Divergence Time Estimation using BEAST v2}.
+#' @details This function creates a matrix of x,y values given parameters of a lognormal density as specified in the program Beast2. It's main purpose is for plotting but other uses such as sensitivity quantification are available. Please note that the value of mean depends on whether we expect it to be in real or log space. Please refer to Heath (2015) for more info: \href{http://phyloworks.org/workshops/DivTime_BEAST2_tutorial_FBD.pdf}{Heath, T. A. (2015). Divergence Time Estimation using BEAST v2}.
 #'
 #' @examples
 #'
-#' # Generate a matrix for the lognoromal density with mean 1 and standard deviation 1, with mean in real space, and spanning values in x from 0 to 10
+#' # Generate a matrix for the lognoromal density with mean 1 and standard deviation 1, with mean
+#' # in real space, and spanning values in x from 0 to 10
 #' lognormalBeast(M = 1, S = 1, meanInRealSpace = TRUE, from = 0, to = 10)
-#' # The same as above but with an offset of 10, that is, the curve starts at 10 as if it was 0 to values will start in (offset + from) and finish in (offset + to) 
+#' # The same as above but with an offset of 10, that is, the curve starts at 10 as if it was 0
+#' # to values will start in (offset + from) and finish in (offset + to)
 #' lognormalBeast(M = 1, S = 1, meanInRealSpace = TRUE, offset = 10, from = 0, to = 10)
-#' 
+#' @export
+
 lognormalBeast <- function(M, S, meanInRealSpace = TRUE, offset = 0, from, to, by = 0.05, ...) {
     if (meanInRealSpace == TRUE) {
         M <- log(M)

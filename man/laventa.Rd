@@ -14,7 +14,6 @@
 \item{elevation}{Position in the stratigraphic column, in meters}
 \item{mineral}{The mineral used for dating the sample}
 \item{comments}{Comments from footnotes in the original table}
-...
 }}
 \usage{
 data(laventa)

@@ -17,7 +17,6 @@
   #' \item{elevation}{Position in the stratigraphic column, in meters}
   #' \item{mineral}{The mineral used for dating the sample}
   #' \item{comments}{Comments from footnotes in the original table}
-  #' ...
   #' }
 #' @references Flynn, J.J., Guerrero, J. & Swisher III, C.C. (1997) Geochronology of the Honda Group. In: R. F. Kay, R. H. Madden, R. L. Cifelli, and J. J. Flynn (Eds), Vertebrate Paleontology in the Neotropics: the Miocene Fauna of La Venta, Colombia. Smithsonian Institution Press, pp. 44–60. 
 "laventa"
