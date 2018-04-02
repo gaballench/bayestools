@@ -41,13 +41,13 @@ findParams <- function(q = c(-1.959964, 0.000000, 1.959964), p = c(0.025,  0.50,
 parameters <- sapply(X = seq(0.6915029, 0.9974714, length.out = 1000),
                      FUN = function(x) {
                          findParams(q = c(0.6915029, 0.9330330, 0.9974714),
-                                    p = c(0.05, 0.5, 0.95),
+                                    p = c(0.025, 0.5, 0.975),
                                     densit = "pbeta",
                                     params = c("shape1", "shape2"),
                                     initVals = c(x, x))$par
                      },
                      simplify = TRUE)
 
-plot(density(t(parameters)[, 1], main = "Density for shape1", xlab = "Shape1", ylab = "Density"))
-plot(density(t(parameters)[, 2], main = "Density for shape2", xlab = "Shape2", ylab = "Density"))
+plot(density(t(parameters)[, 1]), main = "Density for shape1", xlab = "Shape1", ylab = "Density")
+plot(density(t(parameters)[, 2]), main = "Density for shape2", xlab = "Shape2", ylab = "Density")
 ```
