@@ -1,0 +1,53 @@
+---
+title: "Why to use the median of the quantiles as initial values in `optim?`"
+author: "Gustavo A. Ballen"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+One issue with the use of the `optim` function for parameter approximation from a ser of percentiles and quantiles is that it requires initial values for its heuristic search of values. If these initial values are much distant from the unknown real parameter value, then the function has serious problems with convergence and may produce results that are simply wrong. In pre-release versions of `findParams` the initial value was a vector of `1`s corresponding to the number of parameters to estimate (e.g., `c(1, 1)` when estimating `mean` and `sd` in `pnorm`), but this produced simply wrong results when, for instance, the real `mean` was 10 or a larger value.
+
+With a little help of simulation we can show that the best initial guess is in fact the median of the quantiles.
+
+the following code will generate a lot of parameter estimates from several trials using different initial values. With a bit of large number theory, a decent estimate can be found. Here, `q` and `p` are quantiles and percentiles under a given, known distribution; a different anonymous function where sapply varies the values of the initial values allows to get the `$par` element of the `optim` call, and the the density plot shows that overall a median estimate approaches at the correct value. The values of `q` come from qDIST given the probabilities of interest (generally 0.025, 0.5, and 0.975). For instance: qbeta(p = c(0.05, 0.5, 0.95), shape1 = 10, shape2 = 1) for the example below:
+
+```{r, echo = FALSE}
+findParams <- function(q = c(-1.959964, 0.000000, 1.959964), p = c(0.025,  0.50, 0.975), output = "complete", densit="pnorm", params = c("mean", "sd"), initVals = rep(1, times = l)) {
+    l <- length(params)
+    cl <- vector("list", 2  + length(params))
+    cl[[1]] <- as.name(densit)
+    cl[[2]] <- q
+    names(cl) <- c(NA, "q", params)
+    mode(cl) <- "call"
+    quadraticFun <- function(x) {
+        cl[3:(l+2)] <- x
+        res <- eval(cl)
+        sum((res - p)^2)
+    }    
+    res <- optim(initVals, quadraticFun)
+    if (output == "parameters") {
+        return(res$par)
+    }
+    return(res)
+}
+```
+
+```{r, eval = TRUE, warning = FALSE}
+# X = seq... is the set of values to try, from min(q) to max(q). 
+parameters <- sapply(X = seq(0.6915029, 0.9974714, length.out = 1000),
+                     FUN = function(x) {
+                         findParams(q = c(0.6915029, 0.9330330, 0.9974714),
+                                    p = c(0.05, 0.5, 0.95),
+                                    densit = "pbeta",
+                                    params = c("shape1", "shape2"),
+                                    initVals = c(x, x))$par
+                     },
+                     simplify = TRUE)
+
+plot(density(t(parameters)[, 1], main = "Density for shape1", xlab = "Shape1", ylab = "Density"))
+plot(density(t(parameters)[, 2], main = "Density for shape2", xlab = "Shape2", ylab = "Density"))
+```
