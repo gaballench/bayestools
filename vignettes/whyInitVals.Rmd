@@ -1,5 +1,5 @@
 ---
-title: "Why to use the mean of the quantiles as initial values in `optim?`"
+title: "Why to use the mean of the quantiles as initial values in `optim`?"
 author: "Gustavo A. Ballen"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
