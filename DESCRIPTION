@@ -10,7 +10,7 @@ Description: Package for bayesian inference in phylogenetics and evolution.
     a way to measure interdependence between probability density functions
     in the context of comparisons between prior and posterior bayesian
     densities.
-Depends: R (>= 3.4.2)
+Depends: R (>= 3.1.0)
 License: GNU General Public License v3.0
 Encoding: UTF-8
 LazyData: true

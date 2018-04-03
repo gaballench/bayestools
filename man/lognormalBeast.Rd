@@ -29,7 +29,7 @@ This function creates a matrix of x,y values given parameters of a lognormal den
 }
 \examples{
 
-# Generate a matrix for the lognoromal density with mean 1 and standard deviation 1, with mean
+# Generate a matrix for the lognormal density with mean 1 and standard deviation 1, with mean
 # in real space, and spanning values in x from 0 to 10
 lognormalBeast(M = 1, S = 1, meanInRealSpace = TRUE, from = 0, to = 10)
 # The same as above but with an offset of 10, that is, the curve starts at 10 as if it was 0
