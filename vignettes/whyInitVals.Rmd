@@ -1,5 +1,5 @@
 ---
-title: "Why to use the median of the quantiles as initial values in `optim?`"
+title: "Why to use the mean of the quantiles as initial values in `optim?`"
 author: "Gustavo A. Ballen"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -11,9 +11,9 @@ vignette: >
 
 One issue with the use of the `optim` function for parameter approximation from a ser of percentiles and quantiles is that it requires initial values for its heuristic search of values. If these initial values are much distant from the unknown real parameter value, then the function has serious problems with convergence and may produce results that are simply wrong. In pre-release versions of `findParams` the initial value was a vector of `1`s corresponding to the number of parameters to estimate (e.g., `c(1, 1)` when estimating `mean` and `sd` in `pnorm`), but this produced simply wrong results when, for instance, the real `mean` was 10 or a larger value.
 
-With a little help of simulation we can show that the best initial guess is in fact the median of the quantiles.
+With a little help of simulation we can show that the best initial guess is in fact the mean of the quantiles.
 
-the following code will generate a lot of parameter estimates from several trials using different initial values. With a bit of large number theory, a decent estimate can be found. Here, `q` and `p` are quantiles and percentiles under a given, known distribution; a different anonymous function where sapply varies the values of the initial values allows to get the `$par` element of the `optim` call, and the the density plot shows that overall a median estimate approaches at the correct value. The values of `q` come from qDIST given the probabilities of interest (generally 0.025, 0.5, and 0.975). For instance: qbeta(p = c(0.05, 0.5, 0.95), shape1 = 10, shape2 = 1) for the example below:
+the following code will generate a lot of parameter estimates from several trials using different initial values. With a bit of large number theory, a decent estimate can be found. Here, `q` and `p` are quantiles and percentiles under a given, known distribution; a different anonymous function where sapply varies the values of the initial values allows to get the `$par` element of the `optim` call, and the the density plot shows that overall a mean estimate approaches at the correct value. The values of `q` come from qDIST given the probabilities of interest (generally 0.025, 0.5, and 0.975). For instance: qbeta(p = c(0.05, 0.5, 0.95), shape1 = 10, shape2 = 1) for the example below:
 
 ```{r, echo = FALSE}
 findParamsPrototype <- function(q = c(-1.959964, 0.000000, 1.959964), p = c(0.025,  0.50, 0.975), output = "complete", densit="pnorm", params = c("mean", "sd"), initVals = rep(1, times = l)) {
@@ -49,10 +49,10 @@ parameters <- sapply(X = seq(0.6915029, 0.9974714, length.out = 1000),
                      simplify = TRUE)
 
 plot(density(t(parameters)[, 1]), main = "Density for shape1", xlab = "Shape1", ylab = "Density")
-abline(v = median(parameters[1, ]), col = "red")
+abline(v = mean(parameters[1, ]), col = "red")
 
 plot(density(t(parameters)[, 2]), main = "Density for shape2", xlab = "Shape2", ylab = "Density")
-abline(v = median(parameters[2, ]), col = "red")
+abline(v = mean(parameters[2, ]), col = "red")
 ```
 
 Large number theory allow us to expect such result, but, what if the specific initial value matters? Another simulation plotting the parameter value as a function of the initial value can be prepared with, say, a random variable $X ~ N(\mu = 10, \sigma = 1)$. Such a large mean is expected to cause problems with initial values, since in these simulations 10 is huge when compared to 1. Initial values were simulated to take values between 0.001 and 10 because $\sigma > 0$ so zero and negative values would break the code.
