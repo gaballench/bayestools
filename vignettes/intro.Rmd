@@ -9,6 +9,10 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+```{r, echo = FALSE}
+library(bayestools)
+```
+
 This vignette deals with more real-world examples than the documentation examples. It complements the user manual and eventual published references on the usage of the package.
 
 The main place in evolutionary biology where the features contained in `bayestools` belong is in the core of divergence time estimation and incorporation of paleontological and geological information into estimation of the time component of phylogenies and diversification analyses. Here, the tools present in the package aid in implementing information from these fields into bayesian analyses, mainly through specification of priors, the most conspicuous feature of bayesian inference. However, prior specification is a very difficult task and there are few if any rules to follow, along with a lot of misunderstanding along with clearly-unjustified practices.
