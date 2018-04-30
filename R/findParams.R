@@ -8,6 +8,8 @@
 #' 
 #' @param params A character vector with the name of the parameter(s) to optimize in the probability density function. These should match the parameter names of the respective PDF function, e.g., \code{"lambda"} in the function \code{ppois}
 #'
+#' @param initVals A numeric vector with default value \code{NULL}. It allows the user to provide initial values, althought this is discouraged in most cases.
+#' 
 #' @param output One of two possible values: \code{"complete"} and \code{"parameters"}. For the latter the complete output of the \code{optim} function is returned with information on convergence and squared errors (that might be useless for simple cases) or just the parameters.
 #'
 #' @return Either a list with the complete output of convergence, squared errors and parameter values, or just a vector of parameter values. Depends on the value of \code{output}.
@@ -38,9 +40,11 @@
 #'            params = c("meanlog", "sdlog"))
 #' @export
 
-findParams <- function(q, p, output = "complete", pdfunction, params) {
-    # define the initial values for optimization
-    initVals = rep(mean(q), times = length(params))
+findParams <- function(q, p, output = "complete", pdfunction, params, initVals = NULL) {
+    #  calculate init values if the user did not provide any 
+    if (is.null(initVals)) {
+        initVals <- rep(mean(q), times = length(params))
+    }    
     # construct the call as a list
     l <- length(params)
     cl <- vector("list", 2  + length(params))

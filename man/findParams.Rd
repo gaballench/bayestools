@@ -4,7 +4,7 @@
 \alias{findParams}
 \title{Function for estimation of probability density function parameters through quadratic optimization}
 \usage{
-findParams(q, p, output = "complete", pdfunction, params)
+findParams(q, p, output = "complete", pdfunction, params, initVals = NULL)
 }
 \arguments{
 \item{q}{A numeric vector of observed quantiles, might come from a HPD from a previous study (along with a median), or from other sources of prior information. See Details.}
@@ -16,6 +16,8 @@ findParams(q, p, output = "complete", pdfunction, params)
 \item{pdfunction}{A character vector (of length one) with the name of the PDF function of interest. Technically this argument supports any PDF function of the form pDIST (e.g., \code{pnorm}, \code{ppois}, \code{pexp}).}
 
 \item{params}{A character vector with the name of the parameter(s) to optimize in the probability density function. These should match the parameter names of the respective PDF function, e.g., \code{"lambda"} in the function \code{ppois}}
+
+\item{initVals}{A numeric vector with default value \code{NULL}. It allows the user to provide initial values, althought this is discouraged in most cases.}
 }
 \value{
 Either a list with the complete output of convergence, squared errors and parameter values, or just a vector of parameter values. Depends on the value of \code{output}.
